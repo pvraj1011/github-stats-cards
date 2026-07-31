@@ -4,6 +4,7 @@ import * as core from "@actions/core";
 import { loadConfig } from "./config.js";
 import { fetchStatsData, renderStatsCard, StatsData } from "./cards/statsCard.js";
 import { fetchLanguagesData, renderLanguagesCard, LanguagesData } from "./cards/languagesCard.js";
+import { fetchStreakData, renderStreakCard, StreakData } from "./cards/streakCard.js";
 
 async function run(): Promise<void> {
   try {
@@ -79,6 +80,36 @@ async function run(): Promise<void> {
       const languagesPath = path.join(config.outputDir, "languages.svg");
       fs.writeFileSync(languagesPath, languagesSvg, "utf-8");
       console.log(`[SUCCESS] Wrote Top Languages Card SVG to ${languagesPath}`);
+    }
+
+    // -------------------------------------------------------------------------
+    // CARD 3: Streak Tracker Card
+    // -------------------------------------------------------------------------
+    if (config.cards.streak.enabled) {
+      console.log(`[CARD 3] Generating Streak Tracker Card...`);
+      let streakData: StreakData;
+
+      if (isMock) {
+        streakData = {
+          username: config.username,
+          totalContributions: 1399,
+          firstContributionDate: "Aug 01",
+          lastContributionDate: "Jul 31",
+          currentStreak: 18,
+          currentStreakStart: "Jul 14",
+          currentStreakEnd: "Jul 31",
+          longestStreak: 42,
+          longestStreakStart: "Apr 01",
+          longestStreakEnd: "May 12"
+        };
+      } else {
+        streakData = await fetchStreakData(config.username, config.token);
+      }
+
+      const streakSvg = renderStreakCard(streakData);
+      const streakPath = path.join(config.outputDir, "streak.svg");
+      fs.writeFileSync(streakPath, streakSvg, "utf-8");
+      console.log(`[SUCCESS] Wrote Streak Card SVG to ${streakPath}`);
     }
 
     console.log(`[SUCCESS] All enabled cards generated successfully.`);
