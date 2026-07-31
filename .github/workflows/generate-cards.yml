@@ -1,4 +1,4 @@
-name: Generate GitHub Stats Cards
+name: Generate GitHub Stats Cards & Contribution Snake
 
 on:
   schedule:
@@ -36,7 +36,17 @@ jobs:
           OUTPUT_DIR: ./generated_svgs
         run: node dist/main.js
 
-      - name: Deploy SVGs to dedicated 'output' branch
+      - name: Generate Contribution Snake Animation
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            ./generated_svgs/github-contribution-grid-snake.svg
+            ./generated_svgs/github-contribution-grid-snake-dark.svg?palette=github-dark
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT || secrets.GITHUB_TOKEN }}
+
+      - name: Deploy all SVGs to dedicated 'output' branch
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -59,6 +69,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes in generated cards."
           else
-            git commit -m "build: update static SVG stats cards [skip ci]"
+            git commit -m "build: update static SVG stats cards & contribution snake [skip ci]"
             git push origin output --force
           fi

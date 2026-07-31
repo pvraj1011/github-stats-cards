@@ -1,6 +1,6 @@
-# ⚡ Custom GitHub Stats Cards
+# ⚡ Custom GitHub Stats Cards & Contribution Snake
 
-> **Zero-runtime-API, ultra-reliable static SVG stats cards for your GitHub Profile README.**
+> **Zero-runtime-API, ultra-reliable static SVG stats cards & Contribution Snake animation for your GitHub Profile README.**
 > Automatically generated daily via GitHub Actions and committed to a dedicated `output` branch — avoiding third-party view-time rate-limit failures forever.
 
 ---
