@@ -13,9 +13,6 @@ output/
 *.env
 !.env.example
 
-# Local profile preview test folder
-temp profile/
-temp profile
 
 Thumbs.db
 .vscode/
