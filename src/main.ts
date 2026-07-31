@@ -22,24 +22,19 @@ async function run(): Promise<void> {
     }
 
     // -------------------------------------------------------------------------
-    // CARD 0: Header Banner Card
+    // CARD 0: Animated Hero Header Banner Card
     // -------------------------------------------------------------------------
     if (config.cards.header.enabled) {
-      console.log(`[CARD 0] Generating Profile Header Card...`);
+      console.log(`[CARD 0] Generating Animated Profile Header Card...`);
       const headerData: HeaderData = {
-        name: "Vraj Patel",
-        role: "Full-Stack Developer & AI/ML Engineer",
-        location: "Ahmedabad, India",
-        degree: "B.E. Computer Science (2025)",
-        currentCompany: "CSD InfoSolution",
-        currentProject: "Suched Billing System (SBS V2)",
-        focus: "AI Agents, RAG Pipelines & System Architecture"
+        name: "VRAJ PATEL",
+        role: "FULL-STACK DEVELOPER & AI/ML ENGINEER"
       };
 
       const headerSvg = renderHeaderCard(headerData);
       const headerPath = path.join(config.outputDir, "header.svg");
       fs.writeFileSync(headerPath, headerSvg, "utf-8");
-      console.log(`[SUCCESS] Wrote Header Card SVG to ${headerPath}`);
+      console.log(`[SUCCESS] Wrote Animated Header Card SVG to ${headerPath}`);
     }
 
     // -------------------------------------------------------------------------
