@@ -2,8 +2,8 @@ name: Generate GitHub Stats Cards & Contribution Snake
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight UTC
-  workflow_dispatch:     # Allows manual trigger anytime from GitHub Actions tab
+    - cron: '0 0,12 * * *' # Runs twice daily at 00:00 UTC (Midnight) and 12:00 UTC (Noon)
+  workflow_dispatch:        # Manual trigger anytime from GitHub Actions tab
 
 jobs:
   build-and-commit:
@@ -71,4 +71,27 @@ jobs:
           else
             git commit -m "build: update static SVG stats cards & contribution snake [skip ci]"
             git push origin output --force
+          fi
+
+      - name: Auto-sync Profile README to pvraj1011 profile repository (If Changed)
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -n "$GH_PAT" ] && [ -f "./profile_template/README.md" ]; then
+            echo "[INFO] Checking master profile README sync for ${{ github.repository_owner }}/${{ github.repository_owner }}..."
+            git clone https://x-access-token:${GH_PAT}@github.com/${{ github.repository_owner }}/${{ github.repository_owner }}.git /tmp/profile_repo
+            cp ./profile_template/README.md /tmp/profile_repo/README.md
+            cd /tmp/profile_repo
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            if git diff --staged --quiet; then
+              echo "[INFO] No changes detected in profile README. Skipping commit."
+            else
+              git commit -m "ci(profile): auto-sync updated profile README [skip ci]"
+              git push origin main
+              echo "[SUCCESS] Successfully updated profile README in ${{ github.repository_owner }}/${{ github.repository_owner }}!"
+            fi
+          else
+            echo "[WARN] GH_PAT token or profile_template/README.md missing. Skipping auto-sync."
           fi
