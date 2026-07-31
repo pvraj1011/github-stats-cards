@@ -2,6 +2,10 @@
   "username": "pvraj1011",
   "theme": "terminal",
   "cards": {
+    "header": {
+      "enabled": true,
+      "title": "PROFILE HEADER"
+    },
     "stats": {
       "enabled": true,
       "title": "STATISTICS"

@@ -16,6 +16,7 @@ export interface AppConfig {
   outputDir: string;
   theme: string;
   cards: {
+    header: CardConfig;
     stats: CardConfig;
     languages: CardConfig;
     streak: CardConfig;
@@ -40,6 +41,10 @@ export function loadConfig(configPath = "./config.json"): AppConfig {
   const theme = fileConfig.theme || "terminal";
 
   const cards = {
+    header: {
+      enabled: fileConfig.cards?.header?.enabled ?? true,
+      title: fileConfig.cards?.header?.title || "PROFILE HEADER"
+    },
     stats: {
       enabled: fileConfig.cards?.stats?.enabled ?? true,
       title: fileConfig.cards?.stats?.title || "STATISTICS"

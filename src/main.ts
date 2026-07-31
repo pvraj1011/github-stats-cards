@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import * as core from "@actions/core";
 import { loadConfig } from "./config.js";
+import { renderHeaderCard, HeaderData } from "./cards/headerCard.js";
 import { fetchStatsData, renderStatsCard, StatsData } from "./cards/statsCard.js";
 import { fetchLanguagesData, renderLanguagesCard, LanguagesData } from "./cards/languagesCard.js";
 import { fetchStreakData, renderStreakCard, StreakData } from "./cards/streakCard.js";
@@ -18,6 +19,27 @@ async function run(): Promise<void> {
 
     if (!fs.existsSync(config.outputDir)) {
       fs.mkdirSync(config.outputDir, { recursive: true });
+    }
+
+    // -------------------------------------------------------------------------
+    // CARD 0: Header Banner Card
+    // -------------------------------------------------------------------------
+    if (config.cards.header.enabled) {
+      console.log(`[CARD 0] Generating Profile Header Card...`);
+      const headerData: HeaderData = {
+        name: "Vraj Patel",
+        role: "Full-Stack Developer & AI/ML Engineer",
+        location: "Ahmedabad, India",
+        degree: "B.E. Computer Science (2025)",
+        currentCompany: "CSD InfoSolution",
+        currentProject: "Suched Billing System (SBS V2)",
+        focus: "AI Agents, RAG Pipelines & System Architecture"
+      };
+
+      const headerSvg = renderHeaderCard(headerData);
+      const headerPath = path.join(config.outputDir, "header.svg");
+      fs.writeFileSync(headerPath, headerSvg, "utf-8");
+      console.log(`[SUCCESS] Wrote Header Card SVG to ${headerPath}`);
     }
 
     // -------------------------------------------------------------------------
