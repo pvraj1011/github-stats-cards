@@ -1,0 +1,32 @@
+{
+  "name": "github-stats-cards",
+  "version": "1.0.0",
+  "description": "Zero-runtime-API custom SVG GitHub stats cards generated via GitHub Actions",
+  "type": "module",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js",
+    "dev": "tsc && node dist/main.js",
+    "test:render": "node dist/main.js --mock"
+  },
+  "keywords": [
+    "github-stats",
+    "github-action",
+    "svg-cards",
+    "profile-readme"
+  ],
+  "author": "Vraj Patel <pvraj1011>",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^6.0.0",
+    "@octokit/graphql": "^8.1.1",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  }
+}

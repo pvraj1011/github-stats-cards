@@ -1,0 +1,20 @@
+name: 'Custom GitHub Stats Cards Generator'
+description: 'Generates zero-runtime-API custom Retro Terminal SVG cards for GitHub profile READMEs'
+author: 'Vraj Patel (pvraj1011)'
+inputs:
+  github_token:
+    description: 'GitHub Personal Access Token (PAT) with read:user scope'
+    required: true
+  username:
+    description: 'GitHub username to fetch statistics for'
+    required: false
+  output_dir:
+    description: 'Directory where SVG files will be written'
+    required: false
+    default: './output'
+runs:
+  using: 'node20'
+  main: 'dist/main.js'
+branding:
+  icon: 'bar-chart-2'
+  color: 'green'

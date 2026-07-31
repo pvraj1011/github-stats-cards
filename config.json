@@ -1,0 +1,19 @@
+{
+  "username": "pvraj1011",
+  "theme": "terminal",
+  "cards": {
+    "stats": {
+      "enabled": true,
+      "title": "STATISTICS"
+    },
+    "languages": {
+      "enabled": true,
+      "title": "TOP LANGUAGES",
+      "limit": 6
+    },
+    "streak": {
+      "enabled": true,
+      "title": "STREAK TRACKER"
+    }
+  }
+}
