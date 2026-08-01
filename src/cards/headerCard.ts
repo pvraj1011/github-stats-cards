@@ -10,7 +10,7 @@ export function renderHeaderCard(data?: HeaderData): string {
   const name = escapeXml(data?.name || "VRAJ PATEL");
   const role = escapeXml(data?.role || "FULL-STACK DEVELOPER & AI/ML ENGINEER");
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="850" height="240" viewBox="0 0 850 240" fill="none" role="img" aria-label="${name} Hero Banner">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="850" height="245" viewBox="0 0 850 245" fill="none" role="img" aria-label="${name} Hero Banner">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&amp;display=swap');
 
@@ -71,6 +71,21 @@ export function renderHeaderCard(data?: HeaderData): string {
       100% { opacity: 0; transform: translateY(-10px); }
     }
 
+    /* Matrix Binary Rain Columns */
+    .matrix-stream {
+      font-family: 'Fira Code', ui-monospace, monospace;
+      font-size: 11px;
+      fill: #39d353;
+      opacity: 0.15;
+      animation: matrixFall 8s linear infinite;
+    }
+
+    @keyframes matrixFall {
+      0% { transform: translateY(-40px); opacity: 0.2; }
+      50% { opacity: 0.08; }
+      100% { transform: translateY(160px); opacity: 0; }
+    }
+
     /* Animated Border Line */
     .glow-line {
       stroke: url(#line-gradient);
@@ -125,7 +140,7 @@ export function renderHeaderCard(data?: HeaderData): string {
   </defs>
 
   <!-- Container Frame -->
-  <rect x="1" y="1" width="848" height="238" rx="10" class="bg" />
+  <rect x="1" y="1" width="848" height="243" rx="10" class="bg" />
 
   <!-- Top Header Window Bar -->
   <path d="M 1,10 A 10,10 0 0,1 11,1 L 839,1 A 10,10 0 0,1 849,10 L 849,36 L 1,36 Z" class="header-bar" />
@@ -141,10 +156,17 @@ export function renderHeaderCard(data?: HeaderData): string {
   <!-- Animated Glowing Top Border Accent Line -->
   <line x1="1" y1="36" x2="849" y2="36" class="glow-line" />
 
+  <!-- Matrix Background Stream Columns -->
+  <g class="matrix-stream">
+    <text x="760" y="50">01011</text>
+    <text x="785" y="70">10100</text>
+    <text x="810" y="45">11010</text>
+  </g>
+
   <!-- Main Hero Content -->
   <g transform="translate(30, 75)">
     <!-- Command Prompt -->
-    <text x="0" y="0" class="hero-subtitle">&gt; $ ./init_profile.sh --hero</text>
+    <text x="0" y="0" class="hero-subtitle">&gt; $ ./init_profile.sh --hero --matrix</text>
     
     <!-- Big Animated Name Header -->
     <g transform="translate(0, 38)">
@@ -173,7 +195,7 @@ export function renderHeaderCard(data?: HeaderData): string {
 
     <!-- Status Badge (Right Side) -->
     <g transform="translate(570, 20)">
-      <rect x="0" y="0" width="220" height="90" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1" />
+      <rect x="0" y="0" width="220" height="95" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1" />
       
       <!-- Pulsating Green Status Dot -->
       <g transform="translate(24, 28)">
@@ -183,7 +205,7 @@ export function renderHeaderCard(data?: HeaderData): string {
       </g>
 
       <text x="24" y="54" class="term-muted" font-size="11">LOCATION : Ahmedabad, IN</text>
-      <text x="24" y="72" class="term-cyan" font-size="11">STATUS   : Open to Work</text>
+      <text x="24" y="74" class="term-cyan" font-size="11">STATUS   : Open to Work</text>
     </g>
   </g>
 </svg>`;

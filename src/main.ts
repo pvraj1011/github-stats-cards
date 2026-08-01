@@ -6,6 +6,8 @@ import { renderHeaderCard, HeaderData } from "./cards/headerCard.js";
 import { fetchStatsData, renderStatsCard, StatsData } from "./cards/statsCard.js";
 import { fetchLanguagesData, renderLanguagesCard, LanguagesData } from "./cards/languagesCard.js";
 import { fetchStreakData, renderStreakCard, StreakData } from "./cards/streakCard.js";
+import { renderSkillsCard, SkillsData } from "./cards/skillsCard.js";
+import { fetchSpotlightData, renderSpotlightCard, SpotlightData } from "./cards/spotlightCard.js";
 
 async function run(): Promise<void> {
   try {
@@ -127,6 +129,57 @@ async function run(): Promise<void> {
       const streakPath = path.join(config.outputDir, "streak.svg");
       fs.writeFileSync(streakPath, streakSvg, "utf-8");
       console.log(`[SUCCESS] Wrote Streak Card SVG to ${streakPath}`);
+    }
+
+    // -------------------------------------------------------------------------
+    // CARD 4: Skill Mastery Matrix Card
+    // -------------------------------------------------------------------------
+    if (config.cards.skills.enabled) {
+      console.log(`[CARD 4] Generating Skill Mastery Matrix Card...`);
+      const skillsData: SkillsData = {
+        username: config.username,
+        skills: [
+          { name: "React / Next.js", percentage: 95, level: "EXPERT", color: "#39d353" },
+          { name: "Node.js / Express", percentage: 90, level: "EXPERT", color: "#58a6ff" },
+          { name: "AI / RAG / LLM APIs", percentage: 85, level: "ADVANCED", color: "#bc8cff" },
+          { name: "PHP / MVC Architecture", percentage: 85, level: "ADVANCED", color: "#f0883e" },
+          { name: "MongoDB / MySQL", percentage: 80, level: "ADVANCED", color: "#e34c26" }
+        ]
+      };
+
+      const skillsSvg = renderSkillsCard(skillsData);
+      const skillsPath = path.join(config.outputDir, "skills.svg");
+      fs.writeFileSync(skillsPath, skillsSvg, "utf-8");
+      console.log(`[SUCCESS] Wrote Skill Mastery Matrix Card SVG to ${skillsPath}`);
+    }
+
+    // -------------------------------------------------------------------------
+    // CARD 5: Live Project Spotlight Card
+    // -------------------------------------------------------------------------
+    if (config.cards.spotlight.enabled) {
+      console.log(`[CARD 5] Generating Live Project Spotlight Card...`);
+      let spotlightData: SpotlightData;
+
+      if (isMock) {
+        spotlightData = {
+          username: config.username,
+          repoName: "Suched Billing System (SBS V2)",
+          description: "Modular multi-tenant SaaS billing platform with 3FA auth & Schema Synchronizer CLI",
+          primaryLanguage: "PHP / TypeScript",
+          languageColor: "#4F5D95",
+          stargazerCount: 14,
+          forkCount: 3,
+          pushedAt: new Date().toISOString().split("T")[0],
+          status: "PRODUCTION"
+        };
+      } else {
+        spotlightData = await fetchSpotlightData(config.username, "github-stats-cards", config.token);
+      }
+
+      const spotlightSvg = renderSpotlightCard(spotlightData);
+      const spotlightPath = path.join(config.outputDir, "spotlight.svg");
+      fs.writeFileSync(spotlightPath, spotlightSvg, "utf-8");
+      console.log(`[SUCCESS] Wrote Live Project Spotlight Card SVG to ${spotlightPath}`);
     }
 
     console.log(`[SUCCESS] All enabled cards generated successfully.`);

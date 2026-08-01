@@ -20,6 +20,8 @@ export interface AppConfig {
     stats: CardConfig;
     languages: CardConfig;
     streak: CardConfig;
+    skills: CardConfig;
+    spotlight: CardConfig;
   };
 }
 
@@ -57,6 +59,14 @@ export function loadConfig(configPath = "./config.json"): AppConfig {
     streak: {
       enabled: fileConfig.cards?.streak?.enabled ?? true,
       title: fileConfig.cards?.streak?.title || "STREAK TRACKER"
+    },
+    skills: {
+      enabled: fileConfig.cards?.skills?.enabled ?? true,
+      title: fileConfig.cards?.skills?.title || "SKILL MATRIX"
+    },
+    spotlight: {
+      enabled: fileConfig.cards?.spotlight?.enabled ?? true,
+      title: fileConfig.cards?.spotlight?.title || "PROJECT SPOTLIGHT"
     }
   };
 

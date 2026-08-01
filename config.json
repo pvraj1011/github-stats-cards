@@ -18,6 +18,14 @@
     "streak": {
       "enabled": true,
       "title": "STREAK TRACKER"
+    },
+    "skills": {
+      "enabled": true,
+      "title": "SKILL MATRIX"
+    },
+    "spotlight": {
+      "enabled": true,
+      "title": "PROJECT SPOTLIGHT"
     }
   }
 }
