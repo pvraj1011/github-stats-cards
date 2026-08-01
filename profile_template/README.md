@@ -13,6 +13,15 @@ Full-stack developer and AI/ML engineer based in Ahmedabad, India. B.E. in Compu
 
 <br>
 
+### 🎓 Certifications
+
+<p align="left">
+<img src="https://img.shields.io/badge/IBM-AI%20Developer-052FAD?style=for-the-badge&logo=ibm&logoColor=white" alt="IBM AI Developer"/>
+<img src="https://img.shields.io/badge/Oracle-OCI%20Generative%20AI%20Professional-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="OCI Generative AI Professional"/>
+</p>
+
+<br>
+
 ### 🖥️ Quick CLI Bio
 Run this directly in your terminal:
 ```bash
@@ -31,11 +40,18 @@ npx pvraj1011
 
 <br>
 
-### 🎯 Skill Competency & Project Spotlight
+### 🎯 Skill Competency Matrix
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/pvraj1011/github-stats-cards/output/skills.svg" width="49%" alt="Skill Mastery Matrix"/>
-<img src="https://raw.githubusercontent.com/pvraj1011/github-stats-cards/output/spotlight.svg" width="49%" alt="Project Spotlight"/>
+<img src="https://raw.githubusercontent.com/pvraj1011/github-stats-cards/output/skills.svg" width="100%" alt="Skill Mastery Matrix"/>
+</p>
+
+<br>
+
+### 📦 Production Project Spotlight
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/pvraj1011/github-stats-cards/output/spotlight.svg" width="100%" alt="Project Spotlight"/>
 </p>
 
 <br>
@@ -43,8 +59,11 @@ npx pvraj1011
 ### 📊 GitHub Activity & Statistics
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/pvraj1011/github-stats-cards/output/stats.svg" width="49%" alt="GitHub Stats"/>
-<img src="https://raw.githubusercontent.com/pvraj1011/github-stats-cards/output/languages.svg" width="49%" alt="Top Languages"/>
+<img src="https://raw.githubusercontent.com/pvraj1011/github-stats-cards/output/stats.svg" width="100%" alt="GitHub Stats"/>
+</p>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/pvraj1011/github-stats-cards/output/languages.svg" width="100%" alt="Top Languages"/>
 </p>
 
 <p align="center">
