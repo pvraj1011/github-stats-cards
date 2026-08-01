@@ -70,6 +70,10 @@ npx pvraj1011
 <img src="https://raw.githubusercontent.com/pvraj1011/github-stats-cards/output/streak.svg" width="100%" alt="Streak Tracker"/>
 </p>
 
+<p align="center">
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=pvraj1011&bg_color=0d1117&color=58a6ff&line=58a6ff&point=39d353&area=true&area_color=39d353&hide_border=true" width="100%" alt="GitHub Activity Graph"/>
+</p>
+
 <br>
 
 ### 🐍 Contribution Snake
