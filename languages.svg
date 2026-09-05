@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="215" viewBox="0 0 495 215" fill="none" role="img" aria-label="pvraj1011@github: ~ (zsh)">
+  <style>
+    .term-bg { fill: #0d1117; stroke: #30363d; stroke-width: 1px; }
+    .term-header { fill: #161b22; stroke: #30363d; stroke-width: 1px; }
+    .term-title { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; font-weight: 500; fill: #8b949e; }
+    .term-prompt { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; font-weight: 600; fill: #39d353; }
+    .term-cmd { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; font-weight: 500; fill: #58a6ff; }
+    .term-text { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; fill: #c9d1d9; text-rendering: geometricPrecision; }
+    .term-muted { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; fill: #8b949e; }
+    .term-bold { font-weight: 700; }
+    .term-accent-green { fill: #39d353; }
+    .term-accent-cyan { fill: #58a6ff; }
+    .term-accent-orange { fill: #f0883e; }
+    .term-accent-yellow { fill: #e3b341; }
+    .term-accent-purple { fill: #bc8cff; }
+  </style>
+
+  <!-- Window Container -->
+  <rect x="0.5" y="0.5" width="494" height="214" rx="8" class="term-bg" />
+
+  <!-- Window Header Chrome -->
+  <path d="M 0.5,8.5 A 8,8 0 0,1 8.5,0.5 L 486.5,0.5 A 8,8 0 0,1 494.5,8.5 L 494.5,34 L 0.5,34 Z" class="term-header" />
+  
+  <!-- Window Control Buttons -->
+  <circle cx="16" cy="17" r="5.5" fill="#ff5f56" />
+  <circle cx="32" cy="17" r="5.5" fill="#ffbd2e" />
+  <circle cx="48" cy="17" r="5.5" fill="#27c93f" />
+
+  <!-- Window Title -->
+  <text x="247.5" y="21" text-anchor="middle" class="term-title">pvraj1011@github: ~ (zsh)</text>
+
+  <!-- Prompt Command Line -->
+  <g transform="translate(18, 56)">
+    <text class="term-prompt">$</text>
+    <text x="14" class="term-cmd">github-stats --card=languages</text>
+  </g>
+
+  <!-- Card Body Content -->
+  <g transform="translate(18, 70)">
+    
+    <!-- Top ASCII Separator Line -->
+    <text x="0" y="5" class="term-muted">┌───────────────────────────────────────────────────────────────┐</text>
+
+    <!-- Language Percentage Progress Bar Container -->
+    <g transform="translate(0, 5)">
+      <rect x="0" y="18" width="459" height="10" rx="4" fill="#21262d" />
+      <g clip-path="url(#bar-clip)">
+        <rect x="0.0" y="18" width="402.3" height="10" fill="#3178c6" />
+<rect x="402.3" y="18" width="27.6" height="10" fill="#663399" />
+<rect x="429.9" y="18" width="25.5" height="10" fill="#336790" />
+<rect x="455.4" y="18" width="3.6" height="10" fill="#f1e05a" />
+      </g>
+    </g>
+
+    <!-- Clip Path for Rounded Progress Bar -->
+    <svg:defs xmlns:svg="http://www.w3.org/2000/svg">
+      <clipPath id="bar-clip">
+        <rect x="0" y="23" width="459" height="10" rx="4" />
+      </clipPath>
+    </svg:defs>
+
+    <!-- 2-Column Monospace Legend Grid -->
+    
+        <g transform="translate(12, 48)">
+          <circle cx="4" cy="-4" r="4.5" fill="#3178c6" />
+          <text x="16" y="0" class="term-text">TypeScript</text>
+          <text x="140" y="0" class="term-muted">87.7%</text>
+        </g>
+      
+
+        <g transform="translate(12, 72)">
+          <circle cx="4" cy="-4" r="4.5" fill="#663399" />
+          <text x="16" y="0" class="term-text">CSS</text>
+          <text x="140" y="0" class="term-muted">6.0%</text>
+        </g>
+      
+    
+        <g transform="translate(240, 48)">
+          <circle cx="4" cy="-4" r="4.5" fill="#336790" />
+          <text x="16" y="0" class="term-text">PLpgSQL</text>
+          <text x="140" y="0" class="term-muted">5.6%</text>
+        </g>
+      
+
+        <g transform="translate(240, 72)">
+          <circle cx="4" cy="-4" r="4.5" fill="#f1e05a" />
+          <text x="16" y="0" class="term-text">JavaScript</text>
+          <text x="140" y="0" class="term-muted">0.8%</text>
+        </g>
+      
+
+    <!-- Bottom ASCII Separator Line -->
+    <text x="0" y="130" class="term-muted">└───────────────────────────────────────────────────────────────┘</text>
+  
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" fill="none" role="img" aria-label="pvraj1011@github: ~ (zsh)">
+  <style>
+    .term-bg { fill: #0d1117; stroke: #30363d; stroke-width: 1px; }
+    .term-header { fill: #161b22; stroke: #30363d; stroke-width: 1px; }
+    .term-title { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; font-weight: 500; fill: #8b949e; }
+    .term-prompt { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; font-weight: 600; fill: #39d353; }
+    .term-cmd { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; font-weight: 500; fill: #58a6ff; }
+    .term-text { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; fill: #c9d1d9; text-rendering: geometricPrecision; }
+    .term-muted { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; fill: #8b949e; }
+    .term-bold { font-weight: 700; }
+    .term-accent-green { fill: #39d353; }
+    .term-accent-cyan { fill: #58a6ff; }
+    .term-accent-orange { fill: #f0883e; }
+    .term-accent-yellow { fill: #e3b341; }
+    .term-accent-purple { fill: #bc8cff; }
+  </style>
+
+  <!-- Window Container -->
+  <rect x="0.5" y="0.5" width="494" height="194" rx="8" class="term-bg" />
+
+  <!-- Window Header Chrome -->
+  <path d="M 0.5,8.5 A 8,8 0 0,1 8.5,0.5 L 486.5,0.5 A 8,8 0 0,1 494.5,8.5 L 494.5,34 L 0.5,34 Z" class="term-header" />
+  
+  <!-- Window Control Buttons -->
+  <circle cx="16" cy="17" r="5.5" fill="#ff5f56" />
+  <circle cx="32" cy="17" r="5.5" fill="#ffbd2e" />
+  <circle cx="48" cy="17" r="5.5" fill="#27c93f" />
+
+  <!-- Window Title -->
+  <text x="247.5" y="21" text-anchor="middle" class="term-title">pvraj1011@github: ~ (zsh)</text>
+
+  <!-- Prompt Command Line -->
+  <g transform="translate(18, 56)">
+    <text class="term-prompt">$</text>
+    <text x="14" class="term-cmd">github-stats --card=streak</text>
+  </g>
+
+  <!-- Card Body Content -->
+  <g transform="translate(18, 70)">
+    
+    <!-- 3 Terminal Metric Boxes -->
+    
+      <g transform="translate(0, 12)">
+        <rect x="0" y="0" width="145" height="88" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
+        <text x="72.5" y="22" text-anchor="middle" class="term-muted" font-size="11">TOTAL CONTRIBS</text>
+        <text x="72.5" y="50" text-anchor="middle" class="term-accent-green term-bold" font-size="18">662</text>
+        <text x="72.5" y="72" text-anchor="middle" class="term-muted" font-size="10">Aug 31 - Sep 05</text>
+      </g>
+    
+
+    
+      <g transform="translate(157, 12)">
+        <rect x="0" y="0" width="145" height="88" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
+        <text x="72.5" y="22" text-anchor="middle" class="term-muted" font-size="11">CURRENT STREAK</text>
+        <text x="72.5" y="50" text-anchor="middle" class="term-accent-cyan term-bold" font-size="18">34 DAYS</text>
+        <text x="72.5" y="72" text-anchor="middle" class="term-muted" font-size="10">Aug 03 - Sep 05</text>
+      </g>
+    
+
+    
+      <g transform="translate(314, 12)">
+        <rect x="0" y="0" width="145" height="88" rx="6" fill="#161b22" stroke="#30363d" stroke-width="1" />
+        <text x="72.5" y="22" text-anchor="middle" class="term-muted" font-size="11">LONGEST STREAK</text>
+        <text x="72.5" y="50" text-anchor="middle" class="term-accent-orange term-bold" font-size="18">40 DAYS</text>
+        <text x="72.5" y="72" text-anchor="middle" class="term-muted" font-size="10">Jun 23 - Aug 01</text>
+      </g>
+    
+  
+  </g>
+</svg>

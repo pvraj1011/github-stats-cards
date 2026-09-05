@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="195" viewBox="0 0 495 195" fill="none" role="img" aria-label="pvraj1011@github: ~ (zsh)">
+  <style>
+    .term-bg { fill: #0d1117; stroke: #30363d; stroke-width: 1px; }
+    .term-header { fill: #161b22; stroke: #30363d; stroke-width: 1px; }
+    .term-title { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; font-weight: 500; fill: #8b949e; }
+    .term-prompt { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; font-weight: 600; fill: #39d353; }
+    .term-cmd { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; font-weight: 500; fill: #58a6ff; }
+    .term-text { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; fill: #c9d1d9; text-rendering: geometricPrecision; }
+    .term-muted { font-family: Fira Code, JetBrains Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; fill: #8b949e; }
+    .term-bold { font-weight: 700; }
+    .term-accent-green { fill: #39d353; }
+    .term-accent-cyan { fill: #58a6ff; }
+    .term-accent-orange { fill: #f0883e; }
+    .term-accent-yellow { fill: #e3b341; }
+    .term-accent-purple { fill: #bc8cff; }
+  </style>
+
+  <!-- Window Container -->
+  <rect x="0.5" y="0.5" width="494" height="194" rx="8" class="term-bg" />
+
+  <!-- Window Header Chrome -->
+  <path d="M 0.5,8.5 A 8,8 0 0,1 8.5,0.5 L 486.5,0.5 A 8,8 0 0,1 494.5,8.5 L 494.5,34 L 0.5,34 Z" class="term-header" />
+  
+  <!-- Window Control Buttons -->
+  <circle cx="16" cy="17" r="5.5" fill="#ff5f56" />
+  <circle cx="32" cy="17" r="5.5" fill="#ffbd2e" />
+  <circle cx="48" cy="17" r="5.5" fill="#27c93f" />
+
+  <!-- Window Title -->
+  <text x="247.5" y="21" text-anchor="middle" class="term-title">pvraj1011@github: ~ (zsh)</text>
+
+  <!-- Prompt Command Line -->
+  <g transform="translate(18, 56)">
+    <text class="term-prompt">$</text>
+    <text x="14" class="term-cmd">github-stats --card=stats</text>
+  </g>
+
+  <!-- Card Body Content -->
+  <g transform="translate(18, 70)">
+    
+    <!-- Top ASCII Separator Line -->
+    <text x="0" y="5" class="term-muted">┌───────────────────────────────┬───────────────────────────────┐</text>
+    
+    <!-- Row 1: Stars & Commits -->
+    <g transform="translate(0, 26)">
+      <text x="12" y="0" class="term-text">STARS        :</text>
+      <text x="125" y="0" class="term-accent-green term-bold">0</text>
+      
+      <text x="240" y="0" class="term-text">COMMITS      :</text>
+      <text x="355" y="0" class="term-accent-green term-bold">524</text>
+    </g>
+
+    <!-- Row 2: Pull Requests & Issues -->
+    <g transform="translate(0, 52)">
+      <text x="12" y="0" class="term-text">PULL REQUESTS:</text>
+      <text x="125" y="0" class="term-accent-green term-bold">125</text>
+
+      <text x="240" y="0" class="term-text">ISSUES       :</text>
+      <text x="355" y="0" class="term-accent-green term-bold">0</text>
+    </g>
+
+    <!-- Row 3: Public Repos & Total Contributions -->
+    <g transform="translate(0, 78)">
+      <text x="12" y="0" class="term-text">PUBLIC REPOS :</text>
+      <text x="125" y="0" class="term-accent-green term-bold">3</text>
+
+      <text x="240" y="0" class="term-text">CONTRIBUTIONS:</text>
+      <text x="355" y="0" class="term-accent-green term-bold">650</text>
+    </g>
+
+    <!-- Bottom ASCII Separator Line -->
+    <text x="0" y="98" class="term-muted">└───────────────────────────────┴───────────────────────────────┘</text>
+  
+  </g>
+</svg>
